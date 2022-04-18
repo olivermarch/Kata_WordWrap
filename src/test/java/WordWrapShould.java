@@ -1,14 +1,19 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class WordWrapShould {
 
+    /*
+    TODO list
+    ("hola", 7) -> "hola"
+    */
+    WordWrap wordWrap = new WordWrap();
+
     @Test
-    public void check_that_it_runs_to_a_number(){
+    public void wrap_one_word(){
 
-        assertEquals(100,fizzBuzz.recorreNumeros());
+        assertEquals("hola", wordWrap.wrap("hola",7));
     }
-
-    }
-
 
 }
