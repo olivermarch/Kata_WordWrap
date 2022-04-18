@@ -19,16 +19,12 @@ public class WordWrapShould {
         assertEquals("hola", wordWrap.wrap("hola",7));
     }
     @Test
-    public void split_one_word(){
+    public void split_one_word_in_any_width(){
         assertEquals("ho\nla", wordWrap.wrap("hola",2));
-
+        assertEquals("ho\nla\nho\nla", wordWrap.wrap("holahola",2));
     }
-    @Test
-    public void replace_spaces_by_break_lines(){
-        assertEquals("hola\nfulano", wordWrap.wrap("hola fulano",7));
-        assertEquals("hola\nfulano\nque\ntal", wordWrap.wrap("hola fulano que tal",7));
 
-    }
+
 
 
 }
