@@ -23,6 +23,11 @@ public class WordWrapShould {
         assertEquals("ho\nla", wordWrap.wrap("hola",2));
         assertEquals("ho\nla\nho\nla", wordWrap.wrap("holahola",2));
     }
+    @Test
+    public void replace_spaces_by_break_lines(){
+        assertEquals("uno\ndos\ntres", wordWrap.wrap("uno dos  tres",3));
+
+    }
 
 
 
