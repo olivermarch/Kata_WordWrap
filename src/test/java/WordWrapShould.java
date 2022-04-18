@@ -10,6 +10,7 @@ public class WordWrapShould {
     "hola", 2 -> "ho\nla"
     "holaho", 2 -> "ho\nla\nho"
     "hola fulano", 7 -> "hola\nfulano"
+    "hola fulano que tal", 7 -> "hola\nfulano\nque\ntal"
     */
     WordWrap wordWrap = new WordWrap();
 
@@ -25,6 +26,8 @@ public class WordWrapShould {
     @Test
     public void replace_spaces_by_break_lines(){
         assertEquals("hola\nfulano", wordWrap.wrap("hola fulano",7));
+        assertEquals("hola\nfulano\nque\ntal", wordWrap.wrap("hola fulano que tal",7));
+
     }
 
 

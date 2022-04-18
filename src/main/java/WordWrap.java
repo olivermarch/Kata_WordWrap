@@ -8,7 +8,7 @@ public class WordWrap{
 
             return texToWrap;
         } else{
-            if (texToWrap.indexOf(" ") != -1) {
+            if (texToWrap.contains(" ")) {
                 return texToWrap.replace(" ", "\n");
             }
        return texToWrap.substring(0, maxWidth) + lineBreak + texToWrap.substring(maxWidth);
